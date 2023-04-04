@@ -19,6 +19,7 @@ body {
   justify-content: center;
   min-height: 100vh;
   letter-spacing: 1px;
+  padding: 8px;
 }
 .weather .weathercontainer {
   border-radius: 10px;
@@ -43,6 +44,7 @@ body {
 }
 .weather .weathercontainer .otherInfo {
   display: flex;
+  flex-wrap: wrap;
 }
 .weather .weathercontainer .otherInfo div {
   margin-right: 30px;
@@ -54,7 +56,8 @@ body {
 .weather .weathercontainer ul {
   list-style-type: none;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-around;
   margin-top: 6px;
 }
 .weather .weathercontainer ul h3 {
