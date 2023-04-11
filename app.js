@@ -4,7 +4,7 @@ let mintemp = document.querySelector(".mintemp");
 let maxtemp = document.querySelector(".maxtemp");
 let wet = document.querySelector(".wet");
 let wind = document.querySelector(".wind");
-let citycode = 408;
+let citycode = 407;
 async function hello(citycode) {
   try {
     let result = await fetch(
@@ -25,7 +25,7 @@ async function hello(citycode) {
     wind.innerHTML +=
       data.records.location[citycode].weatherElement[2].elementValue +
       "公里/小時";
-    console.log(data.records);
+    console.log(data.records.location);
 
   } catch {
     console.log(e);
@@ -41,7 +41,7 @@ document.querySelector(".Taipei").addEventListener("click", function () {
   maxtemp.innerHTML = "";
   wet.innerHTML = "";
   wind.innerHTML = "";
-  cityCode = 408; //台北
+  cityCode = 407; //台北
   hello(cityCode);
 });
 
@@ -63,7 +63,7 @@ document.querySelector(".TaoYuan").addEventListener("click", function () {
   maxtemp.innerHTML = "";
   wet.innerHTML = "";
   wind.innerHTML = "";
-  cityCode = 415; //桃園
+  cityCode = 414; //桃園
   hello(cityCode);
 });
 
@@ -74,7 +74,7 @@ document.querySelector(".Taichung").addEventListener("click", function () {
   maxtemp.innerHTML = "";
   wet.innerHTML = "";
   wind.innerHTML = "";
-  cityCode = 116; //台中
+  cityCode = 481; //台中
   hello(cityCode);
 });
 
@@ -85,7 +85,7 @@ document.querySelector(".Tainan").addEventListener("click", function () {
   maxtemp.innerHTML = "";
   wet.innerHTML = "";
   wind.innerHTML = "";
-  cityCode = 412; //台南
+  cityCode = 475; //台南
   hello(cityCode);
 });
 
@@ -96,7 +96,7 @@ document.querySelector(".Kaohsiung").addEventListener("click", function () {
   maxtemp.innerHTML = "";
   wet.innerHTML = "";
   wind.innerHTML = "";
-  cityCode = 419; //高雄市
+  cityCode = 382; //高雄市
   hello(cityCode);
 });
 
