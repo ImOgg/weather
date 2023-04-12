@@ -12,6 +12,7 @@ body {
   background-position: center center;
 }
 
+
 .weather {
   display: flex;
   align-items: center;
@@ -88,4 +89,40 @@ body {
 
 @media screen and (max-width:555px) { 
   
+}
+
+section.animation-wrapper{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  z-index: 10;
+  section.animation{
+      margin-top: 10vh;
+      height: 80vh;
+      // border: 5px solid red;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .hero{
+          // border: 5px solid green;
+          width: 100%;
+          height: 0%;
+          img{
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              
+          }
+      }
+  }
+  .slider{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: linear-gradient(to right ,rgb(255,161,87),rgb(255,236,189));
+      z-index: -1;
+  }
 }
